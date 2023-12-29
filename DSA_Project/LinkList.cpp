@@ -38,13 +38,26 @@ bool LinkList::listcheck(int r, int c)
 	return true;
 }
 
+void LinkList::Clear() {
+	Node* current = head;
+	while (current != nullptr) {
+		Node* next = current->next;
+		delete current;
+		current = next;
+	}
+	head = nullptr;
+}
+
+
 void LinkList::Display()
 {
 	Node* t = this->head;
+	int i = 1;
 	while (t != nullptr) {
-		cout << "Row: " << t->row << " ";
+		cout << i << " Row: " << t->row << " ";
 		cout << "Col: " << t->col << endl;
 		t = t->next;
+		i++;
 	}
 	cout << endl;
 }

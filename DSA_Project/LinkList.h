@@ -7,6 +7,7 @@ public:
 	LinkList();
 	void Insert(int, int);
 	bool listcheck(int, int);
+	void Clear();
 	void Display();
 };
 

@@ -10,7 +10,11 @@ public:
 	int board[N][N];
 	Game();
 	bool isValid( int, int, int);
+	bool isUniqueSolution();
 	void generateSudoku( int);
+	bool solveSudoku();
 	void printSudoku();
+	bool isSolved();
+	void play();
 };
 
